@@ -23,7 +23,7 @@ int main()
 
 int Save (int key_stroke, char *file)
 {
-    if ( (key_stroke == 1) || (key_stroke == 2) )
+    if (key_stroke <= 7)
     return 0;
 
     FILE *OUTPUT_FILE;
