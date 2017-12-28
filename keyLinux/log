@@ -1,0 +1,2 @@
+1. use tmux for hiding terminal window of c
+2. use ncurses.h to create the new window 

